@@ -10,9 +10,9 @@ import sqlite3
 import json
 
 # Constants
-TOKEN = 'MTQwOTY1NDAyNjMwNzYzNzMxOA.Ge2GkS.xs3clz2W00Pw4ua2_QDRhWlLlCPLbIZ-DU1CSU'  # Replace
-PREDICTION_CHANNEL_ID = 1410246738232479824  # Replace
-RESULTS_CHANNEL_ID = 1410246738232479824  # Replace
+TOKEN = ''  # Replace
+PREDICTION_CHANNEL_ID =   # Replace
+RESULTS_CHANNEL_ID =  # Replace
 TZ = pytz.timezone('America/New_York')
 TICKERS = ['BTC', 'ETH', 'XRP', 'SOL', 'HYPE']
 COINGECKO_IDS = 'bitcoin,ethereum,ripple,solana,hyperliquid'
@@ -247,5 +247,6 @@ async def open_window(interaction: discord.Interaction):
 async def process_results_now(interaction: discord.Interaction):
     await process_results()
     await interaction.response.send_message("Results processed manually.", ephemeral=True)
+
 
 bot.run(TOKEN)
